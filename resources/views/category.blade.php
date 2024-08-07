@@ -16,7 +16,7 @@
             <div class="col-lg-4 col-md-6 text-center">
                 <div class="single-product-item">
                     <div class="product-image">
-                        <a href="/product/{{$item->catid}}"><img src="{{url($item->image)}}"
+                        <a href="{{route('products.show',$item->catid)}}"><img src="{{url($item->image)}}"
                             style=max-height:250px!important;min-height:250px!important alt=""></a>
                     </div>
                     <h3>{{$item->name}}</h3>

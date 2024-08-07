@@ -7,12 +7,12 @@
   <title>Dashboard - Admin</title>
 
   <!-- Tailwind is included -->
-  <link rel="stylesheet" href="dist/css/main.css?v=1628755089081">
+  <link rel="stylesheet" href="{{asset('dist/css/main.css?v=1628755089081')}}">
 
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
-  <link rel="icon" type="image/png" sizes="32x32" href="dist/favicon-32x32.png"/>
-  <link rel="icon" type="image/png" sizes="16x16" href="dist/favicon-16x16.png"/>
-  <link rel="mask-icon" href="dist/safari-pinned-tab.svg" color="#00b4b6"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="{{asset('dist/favicon-32x32.png')}}"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="{{asset('dist/favicon-16x16.png')}}"/>
+  <link rel="mask-icon" href="{{asset('dist/safari-pinned-tab.svg')}}" color="#00b4b6"/>
 
   <meta name="description" content="Admin One - free Tailwind dashboard">
 
@@ -68,19 +68,19 @@
           </span>
         </a>
         <div class="navbar-dropdown">
-          <a href="/addpro" class="navbar-item">
+          <a href="{{route('product.create')}}" class="navbar-item">
             <span class="icon"><b>+</b></span>
             <span>add product</span>
           </a>
-          <a href="/addcat" class="navbar-item">
+          <a href="{{route('category.create')}}" class="navbar-item">
             <span class="icon"><b>+</b></span>
             <span>add category</span>
           </a>
-          <a href="/orders" class="navbar-item">
+          <a href="{{route('orders.index')}}" class="navbar-item">
             <span class="icon"><i class="mdi mdi-cart-outline mdi-25px"></i></span>
             <span>orders</span>
           </a>
-          <a  href="/messages" class="navbar-item">
+          <a  href="{{route('messages.index')}}" class="navbar-item">
             <span class="icon"><i class="mdi mdi-email"></i></span>
             <span>Messages</span>
           </a>
@@ -96,11 +96,11 @@
           <span class="icon"><i class="mdi mdi-chevron-down"></i></span>
         </a>
         <div class="navbar-dropdown">
-          <a href="/profile" class="navbar-item">
+          <a href="{{route('admin.index')}}" class="navbar-item">
             <span class="icon"><i class="mdi mdi-account"></i></span>
             <span>My Profile</span>
           </a>
-          <a href="/messages" class="navbar-item">
+          <a href="{{route('messages.index')}}" class="navbar-item">
             <span class="icon"><i class="mdi mdi-email"></i></span>
             <span>Messages</span>
           </a>
@@ -236,10 +236,10 @@
 </div>
 
 <!-- Scripts below are for demo only -->
-<script type="text/javascript" src="dist/js/main.min.js?v=1628755089081"></script>
+<script type="text/javascript" src="{{asset('dist/js/main.min.js?v=1628755089081')}}"></script>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
-<script type="text/javascript" src="dist/js/chart.sample.min.js"></script>
+<script type="text/javascript" src="{{asset('dist/js/chart.sample.min.js')}}"></script>
 
 
 <script>
