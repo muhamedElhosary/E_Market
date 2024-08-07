@@ -11,7 +11,7 @@
           </p>
         </header>
         <div class="card-content">
-          <form action="{{route('profile.edit')}}" method="POST" enctype="multipart/form-data">
+          <form action="{{route('admin.edit',$admin->id)}}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="field">
               <label class="label">Avatar</label>

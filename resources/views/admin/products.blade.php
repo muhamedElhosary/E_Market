@@ -29,7 +29,7 @@
         </td>
         
         <td>
-          <form action="{{ route('products.destroy', $prod->pid) }}" method="POST">
+          <form action="{{ route('product.destroy', $prod->pid) }}" method="POST">
                 @csrf
                 @method('DELETE')
                 <button type="submit" class="button small red --jb-modal" onsubmit="return confirm('Are you sure you want to delete this product?');">
