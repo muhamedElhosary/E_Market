@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Contactus;
+use App\Models\ContactUs;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -14,7 +14,7 @@ class contactController extends Controller
     public function index()
     {
         $admin=User::all()->last();
-        $msgs=Contactus::all();
+        $msgs=ContactUS::all();
         return view('admin.messages',compact('msgs','admin'));
     }
 
@@ -38,7 +38,7 @@ class contactController extends Controller
             'message'=>'required'
         ]);
 
-        $contact=new Contactus;
+        $contact=new ContactUS;
         $contact->name=$request->name;
         $contact->email=$request->email;
         $contact->phone=$request->phone;
@@ -50,7 +50,7 @@ class contactController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Contactus $contactus)
+    public function show(ContactUS $contactus)
     {
         //
     }
@@ -58,7 +58,7 @@ class contactController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Contactus $contactus)
+    public function edit(ContactUS $contactus)
     {
         //
     }
@@ -66,7 +66,7 @@ class contactController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Contactus $contactus)
+    public function update(Request $request, ContactUS $contactus)
     {
         //
     }
@@ -76,7 +76,7 @@ class contactController extends Controller
      */
     public function destroy($id)
     {
-        $msg=Contactus::where('id',$id);
+        $msg=ContactUS::where('id',$id);
         $msg->delete();
         return redirect('/messages')->with('success', 'Product deleted successfully');
     }

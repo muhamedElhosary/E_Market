@@ -15,6 +15,7 @@ class Customer extends Model
         'address',
         'phone',
         'message',
-        'productid'
+        'productid',
+        'payment_id'
     ];
 }

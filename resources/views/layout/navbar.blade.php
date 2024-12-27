@@ -61,7 +61,7 @@
                                     <li class="current-list-item"><a href="/">Home</a>
         
                                     </li>
-                                    <li><a href="{{route('products.index')}}" style="color: orange">Products</a></li>
+                                    <li><a href="/product" style="color: orange">Products</a></li>
                                     <li><a href="/allcategory" style="color: orange">categories</a></li>
                                     <li><a href="#" style="color: orange">Pages</a>
                                         <ul class="sub-menu">

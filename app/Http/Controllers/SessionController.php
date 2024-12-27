@@ -57,7 +57,7 @@ class SessionController extends Controller
     // مسح السلة بعد تخزين الطلب
     $request->session()->forget('products');
 
-    return redirect('/checkout')->with('success','order added Successfully');
+    return redirect('/');
     }
 
     public function RemoveSession(Request $request, $id)

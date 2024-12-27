@@ -26,7 +26,7 @@
           <small class="text-gray-500" title="Oct 25, 2021">{{$cat->created_at}}</small>
         </td>
         <td>
-          <form action="{{ route('category.destroy', $cat->catid) }}" method="POST">
+          <form action="{{ route('categories.destroy', $cat->catid) }}" method="POST">
                 @csrf
                 @method('DELETE')
                 <button type="submit" class="button small red --jb-modal" onsubmit="return confirm('Are you sure you want to delete this product?');">
